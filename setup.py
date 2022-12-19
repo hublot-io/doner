@@ -61,6 +61,7 @@ setup(
         "trdg",
         "gradio",
         "zss",
+        "tqdm",
         "sconf>=0.2.3",
     ],
     classifiers=[

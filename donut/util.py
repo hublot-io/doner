@@ -8,7 +8,7 @@ import os
 import random
 from collections import defaultdict
 from typing import Any, Dict, List, Tuple, Union
-
+from tqdm import tqdm 
 import torch
 import zss
 from datasets import load_dataset
@@ -65,15 +65,16 @@ class DonutDataset(Dataset):
         self.dataset_length = len(self.dataset)
 
         self.gt_token_sequences = []
-        for sample in self.dataset:
+
+        for sample in tqdm(self.dataset):
             ground_truth = json.loads(sample["ground_truth"])
+            print("Reading sample",ground_truth)
             if "gt_parses" in ground_truth:  # when multiple ground truths are available, e.g., docvqa
                 assert isinstance(ground_truth["gt_parses"], list)
                 gt_jsons = ground_truth["gt_parses"]
             else:
                 assert "gt_parse" in ground_truth and isinstance(ground_truth["gt_parse"], dict)
                 gt_jsons = [ground_truth["gt_parse"]]
-
             self.gt_token_sequences.append(
                 [
                     task_start_token

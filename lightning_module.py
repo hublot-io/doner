@@ -97,7 +97,8 @@ class DonutModelPLModule(pl.LightningModule):
         for i, results in enumerate(validation_step_outputs):
             for scores in results:
                 cnt[i] += len(scores)
-                total_metric[i] += np.sum(scores)
+                score = [s.cpu() for s in scores ]
+                total_metric[i] += np.sum(score)
             val_metric[i] = total_metric[i] / cnt[i]
             val_metric_name = f"val_metric_{i}th_dataset"
             self.log_dict({val_metric_name: val_metric[i]}, sync_dist=True)

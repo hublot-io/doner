@@ -18,7 +18,6 @@ dataset_split = args.split
 iterator = dataset[dataset_split].__iter__()
 img_height = 32
 img_width = 2000
-BILOU_MAP = ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC', 'B-MISC', 'I-MISC']
 
 def get_text_sequence(conll_item):
     return {"text_sequence": " ".join(conll_item['tokens'])}
@@ -28,11 +27,11 @@ def get_ner_sequence(conll_item):
     ziped = zip(conll_item['tokens'], conll_item['ner_tags'])
     res = []
     for (key,val) in ziped:
-        m = {}
-        m[key] = val
-        res.append(m)
+        res.append({
+            "word": key,
+            "token": val
+        })
     return {"ner":res}
-
 for i, c in enumerate(iterator):
     try:
         image_name = "{}/{}_{}.jpg".format(dataset_split,dataset_split, i)
