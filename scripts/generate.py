@@ -34,40 +34,43 @@ def get_ner_sequence(conll_item):
     return {"ner":res}
 
 for i, c in enumerate(iterator):
-    image_name = "{}/{}_{}.jpg".format(dataset_split,dataset_split, i)
+    try:
+        image_name = "{}/{}_{}.jpg".format(dataset_split,dataset_split, i)
 
-    build_ner = []
+        build_ner = []
 
-    data = {
-        "ground_truth": json.dumps({
-            "gt_parse": get_ner_sequence(c) if args.type == 'ner' else get_text_sequence(c)
-        }),
-        "file_name": "{}_{}.jpg".format(dataset_split, i)
-    }
+        data = {
+            "ground_truth": json.dumps({
+                "gt_parse": get_ner_sequence(c) if args.type == 'ner' else get_text_sequence(c)
+            }),
+            "file_name": "{}_{}.jpg".format(dataset_split, i)
+        }
 
-    text = " ".join(c['tokens'])
-    num_chunks = len(c['tokens']) if len(c['tokens']) <= 6 else random.randrange(1, 4)
-    chunk = np.array_split(c['tokens'],num_chunks)
-    chunk = [list(c) for c in chunk]
-    strs = [" ".join(t) for t in chunk]
-    generator = GeneratorFromStrings(
-        strs,
-        random_blur=True,
-        random_skew=True,
-        distorsion_type=3,
-        background_type=1,
-        text_color="#000000,#888888",
-        count=len(strs)
-    )
-    imgs = [val[0] for val in generator]
-    max_w = max([img.width for img in imgs])
-    img_dest = Image.new('RGB', (max_w, num_chunks*img_height),(255, 255, 255))
-    for ii, img in enumerate(imgs):
-        img_dest.paste(img, (0, img_height * ii))
-    
-    with open('data/OCR/{}/metadata.jsonl'.format(dataset_split), 'a') as fw:
-        fp = "data/OCR/{}".format(image_name)
-        img_dest.save(fp)
-        fw.write("{}\n".format(json.dumps(data)))
-    if i >= int(args.num) :
-        break 
+        text = " ".join(c['tokens'])
+        num_chunks = len(c['tokens']) if len(c['tokens']) <= 6 else random.randrange(1, 4)
+        chunk = np.array_split(c['tokens'],num_chunks)
+        chunk = [list(c) for c in chunk]
+        strs = [" ".join(t) for t in chunk]
+        generator = GeneratorFromStrings(
+            strs,
+            random_blur=True,
+            random_skew=True,
+            distorsion_type=3,
+            background_type=1,
+            text_color="#000000,#888888",
+            count=len(strs)
+        )
+        imgs = [val[0] for val in generator]
+        max_w = max([img.width for img in imgs])
+        img_dest = Image.new('RGB', (max_w, num_chunks*img_height),(255, 255, 255))
+        for ii, img in enumerate(imgs):
+            img_dest.paste(img, (0, img_height * ii))
+        
+        with open('data/OCR/{}/metadata.jsonl'.format(dataset_split), 'a') as fw:
+            fp = "data/OCR/{}".format(image_name)
+            img_dest.save(fp)
+            fw.write("{}\n".format(json.dumps(data)))
+        if i >= int(args.num) :
+            break 
+    except e:
+        print('Cannot generate this image')
