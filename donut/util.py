@@ -68,7 +68,6 @@ class DonutDataset(Dataset):
 
         for sample in tqdm(self.dataset):
             ground_truth = json.loads(sample["ground_truth"])
-            print("Reading sample",ground_truth)
             if "gt_parses" in ground_truth:  # when multiple ground truths are available, e.g., docvqa
                 assert isinstance(ground_truth["gt_parses"], list)
                 gt_jsons = ground_truth["gt_parses"]

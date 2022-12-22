@@ -57,6 +57,7 @@ setup(
         "nltk",
         "sentencepiece",
         "tensorboard",
+        "huggingface_hub",
         "Pillow==9.2.0",
         "trdg",
         "gradio",
