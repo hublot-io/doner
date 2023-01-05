@@ -61,8 +61,13 @@ def train(config):
     datasets = {"train": [], "validation": []}
     for i, dataset_name_or_path in enumerate(config.dataset_name_or_paths):
         task_name = os.path.basename(dataset_name_or_path)  # e.g., cord-v2, docvqa, rvlcdip, ...
-        
+        print("TASK NAME", task_name)
         # add categorical special tokens (optional)
+        if task_name == "fish-label":
+             model_module.model.decoder.add_special_tokens([
+                "<word/>", "<tag/>"
+             ])
+            
         if task_name == "rvlcdip":
             model_module.model.decoder.add_special_tokens([
                 "<advertisement/>", "<budget/>", "<email/>", "<file_folder/>", 
@@ -106,7 +111,7 @@ def train(config):
         monitor="val_metric",
         dirpath=Path(config.result_path) / config.exp_name / config.exp_version,
         filename="artifacts",
-        save_top_k=1,
+        save_top_k=3,
         save_last=False,
         mode="min",
     )
@@ -117,14 +122,14 @@ def train(config):
         num_nodes=config.get("num_nodes", 1),
         gpus=torch.cuda.device_count(),
         strategy="dp",
-        accelerator="cpu",
+        accelerator="gpu",
         plugins=custom_ckpt,
         max_epochs=config.max_epochs,
         max_steps=config.max_steps,
         val_check_interval=config.val_check_interval,
         check_val_every_n_epoch=config.check_val_every_n_epoch,
         gradient_clip_val=config.gradient_clip_val,
-        precision=32,
+        precision=16,
         num_sanity_val_steps=0,
         logger=logger,
         callbacks=[lr_callback, checkpoint_callback],

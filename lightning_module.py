@@ -17,7 +17,8 @@ from timm.data.constants import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from torch.nn.utils.rnn import pad_sequence
 from torch.optim.lr_scheduler import LambdaLR
 from torch.utils.data import DataLoader
-
+from donut.weights import get_dataset_weights
+from torch.utils.data import WeightedRandomSampler
 from donut import DonutConfig, DonutModel
 
 
@@ -165,6 +166,10 @@ class DonutDataPLModule(pl.LightningDataModule):
     def train_dataloader(self):
         loaders = list()
         for train_dataset, batch_size in zip(self.train_datasets, self.train_batch_sizes):
+            weights = get_dataset_weights(train_dataset)
+            print('DS: ', len(train_dataset.dataset), 'W', len(weights))
+            sampler = WeightedRandomSampler(weights, len(train_dataset), False)
+
             loaders.append(
                 DataLoader(
                     train_dataset,
@@ -173,7 +178,8 @@ class DonutDataPLModule(pl.LightningDataModule):
                     pin_memory=True,
                     worker_init_fn=self.seed_worker,
                     generator=self.g,
-                    shuffle=True,
+                    # shuffle=True,
+                    sampler=sampler
                 )
             )
         return loaders

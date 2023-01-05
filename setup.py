@@ -63,6 +63,7 @@ setup(
         "gradio",
         "zss",
         "tqdm",
+        "matplotlib",
         "sconf>=0.2.3",
     ],
     classifiers=[
