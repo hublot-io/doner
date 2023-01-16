@@ -20,7 +20,6 @@ from pytorch_lightning.loggers.tensorboard import TensorBoardLogger
 from pytorch_lightning.plugins import CheckpointIO
 from pytorch_lightning.utilities import rank_zero_only
 from sconf import Config
-
 from donut import DonutDataset
 from lightning_module import DonutDataPLModule, DonutModelPLModule
 
@@ -58,15 +57,15 @@ def train(config):
     data_module = DonutDataPLModule(config)
 
     # add datasets to data_module
-    datasets = {"train": [], "validation": []}
+    datasets = {"train": [], "test": []}
     for i, dataset_name_or_path in enumerate(config.dataset_name_or_paths):
         task_name = os.path.basename(dataset_name_or_path)  # e.g., cord-v2, docvqa, rvlcdip, ...
         print("TASK NAME", task_name)
         # add categorical special tokens (optional)
-        if task_name == "fish-label":
-             model_module.model.decoder.add_special_tokens([
-                "<word/>", "<tag/>"
-             ])
+        # if task_name == "fish-label":
+        #      model_module.model.decoder.add_special_tokens([
+        #         "<fish/>","","",""
+        #      ])
             
         if task_name == "rvlcdip":
             model_module.model.decoder.add_special_tokens([
@@ -78,7 +77,7 @@ def train(config):
         if task_name == "docvqa":
             model_module.model.decoder.add_special_tokens(["<yes/>", "<no/>"])
             
-        for split in ["train", "validation"]:
+        for split in ["train", "test"]:
             datasets[split].append(
                 DonutDataset(
                     dataset_name_or_path=dataset_name_or_path,
@@ -96,7 +95,7 @@ def train(config):
             # for docvqa task, i.e., {"question": {used as a prompt}, "answer": {prediction target}},
             # set prompt_end_token to "<s_answer>"
     data_module.train_datasets = datasets["train"]
-    data_module.val_datasets = datasets["validation"]
+    data_module.val_datasets = datasets["test"]
 
     logger = TensorBoardLogger(
         save_dir=config.result_path,

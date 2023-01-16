@@ -1,0 +1,337 @@
+Class,Label,Count
+Fish,Saint-pierre,3
+Fish,Plie,3
+Fish,Langoustines,38
+Fish,Poulpe,3
+Fish,Bulot,16
+Fish,Lançon commun,1
+Fish,Couteau,32
+Fish,Sar commun,2
+Fish,Crabe royal de l’antarctique,1
+Fish,Chinchard commun,4
+Fish,Merlu commun,32
+Fish,Barbue,1
+Fish,Coque,10
+Fish,Flétan noir,7
+Fish,Palourde japonaise,2
+Fish,Sardine,8
+Fish,Sabre commun,6
+Fish,Saint-Jacques,15
+Fish,Araignée,22
+Fish,Oursin,5
+Fish,Lieu jaune,7
+Fish,Encornet blanc,13
+Fish,Clam,1
+Fish,Vieille,2
+Fish,Hareng,1
+Fish,Dorade royale,3
+Fish,Haddock,2
+Fish,Maigre commun,2
+Fish,Crevettes roses,4
+Fish,Crevettes grises,36
+Fish,Vénus,4
+Fish,Carrelet,16
+Fish,Saumon,4
+Fish,Lieu noir,24
+Fish,Crabe vert,1
+Fish,Mulet,9
+Fish,Turbot,6
+Fish,Dorade grise,11
+Fish,Amande,11
+Fish,Vernis,1
+Fish,Dorade rose,1
+Fish,Mulet doré,2
+Fish,Moules,4
+Fish,Pétoncle noir,2
+Fish,Lingue espagnole,1
+Fish,Bar,14
+Fish,Salicorne,1
+Fish,Raie circulaire,1
+Fish,Rouget-barbet,39
+Fish,Sole,64
+Fish,Lotte,29
+Fish,Anguille d’europe,1
+Fish,Sole blonde,4
+Fish,Langouste rouge,1
+Fish,Limande-sole,2
+Fish,Encornet rouge,28
+Fish,Huîtres creuses,3
+Fish,Loup,1
+Fish,Pétoncle blanc,2
+Fish,Cabillaud,102
+Fish,Thon germon,1
+Fish,Calmar,8
+Fish,Raie bouclée,7
+Fish,Céteau,1
+Fish,Congre commun,3
+Fish,Tourteau,36
+Fish,Julienne,5
+Fish,Loup de mer,3
+Fish,Roussette,10
+Fish,Étrille,2
+Fish,Maquereau,50
+Fish,Dorade-sébaste,23
+Fish,Thon albacore,1
+Fish,Raie douce,1
+Fish,Prêtre,2
+Fish,Tacaud commun,1
+Fish,Raie lisse,19
+Fish,Poulpe blanc,1
+Fish,Saumonette,1
+Fish,Ombrine,2
+Fish,Merlan,25
+Fish,Seiche,16
+Fish,Raie fleurie,13
+Fish,Truite arc-en-ciel,8
+Fish,Grondin perlon,3
+Fish,Thon blanc,1
+Fish,Palourde,3
+Fish,Morue,6
+Fish,Églefin,11
+Fish,Praire,4
+Fish,Raie,133
+Fish,Bigorneaux,6
+Fish,Grondin rouge,15
+Fish,Crevettes bouquet,2
+Fish,Lingue bleue,3
+Szone,Ouest Méditerranée ,3
+Szone,Açores,45
+Szone,Nord Açores,39
+Szone,Mer Baltique,35
+Szone,Autres zones,37
+Szone,Manche et Mers Celtiques,39
+Szone,Mer de Barents,38
+Szone,Mers de Norvège,44
+Szone,Mer du Nord,38
+Szone,Islande et Féroé,41
+Szone,Golfe de Gascogne ,46
+Szone,Ouest Portugal,38
+Szone,Est Groenland,33
+Szone,Ouest Ecosse,50
+Szone,Mer Noire,2
+Zone,Atlantique Nord Est,348
+Zone,Méditérranée ,2
+Provenance,Écosse,2
+Provenance,Espagne,1
+Provenance,Turquie,3
+Provenance,France,13
+Provenance,Norvège,1
+Provenance,Royaume-Uni,1
+Provenance,Équateur,1
+Provenance,Islande,1
+ZoneCode,37,10
+ZoneCode,27,1064
+Latin,Paracentrotus lividus,2
+Latin,Conger conger,3
+Latin,Mugil cephalus,3
+Latin,Sepia aculeata,5
+Latin,Atherina presbyter,2
+Latin,Oncorthynchus clarkii clarkii,2
+Latin,Chamelea striatula,1
+Latin,Sphaerechinus granularis,3
+Latin,Raja clavata,17
+Latin,Glyptocephalus cynoglossus,4
+Latin,Sepia pharaonis,2
+Latin,Penaeus duorarum,2
+Latin,Raja SPP,8
+Latin,Spisula SPP,1
+Latin,Parupeneus indicus,20
+Latin,Loliginidae,1
+Latin,Sepia officinalis,6
+Latin,Crangon vulgaris,20
+Latin,Aequipecten opercularis,1
+Latin,Mullus surmuletus,7
+Latin,Dicentrarchus labrax,15
+Latin,Trigla lucerna,2
+Latin,Trachurus trachurus,4
+Latin,Sparus aurata,3
+Latin,Venus verrucosa,4
+Latin,Diplodus sargus sargus,2
+Latin,Atheresthes stomias,4
+Latin,Clupea harengus,1
+Latin,Nephrops norvegicus,38
+Latin,Bathyraja scaphiops,21
+Latin,Penaeus brasiliensis,1
+Latin,Molva dypterygia,3
+Latin,Liza aurata,3
+Latin,Chlamys varia,1
+Latin,Sepia orbignyana,1
+Latin,Loligo vulgaris,6
+Latin,Leucoraja circularis,10
+Latin,Beryx decadactylus,1
+Latin,Pleuronectes platessa,6
+Latin,Penaeus vannamei,1
+Latin,Crangon crangon,16
+Latin,Torpedo marmorata,13
+Latin,Cynoglossus Cynoglossus,15
+Latin,Mytilus edulis,3
+Latin,Palaemon serratus,2
+Latin,Mercenaria SPP,1
+Latin,Eledone cirrhosa,1
+Latin,Sardina pilchardus,8
+Latin,Ensis SPP,5
+Latin,Littorina littorea,6
+Latin,Mimachlamys varia,1
+Latin,Lophius piscatorius,14
+Latin,Pollachius virens,24
+Latin,Psetta maxima,4
+Latin,Circomphalus SPP,1
+Latin,Hyperoplus lanceolatus,1
+Latin,Pecten maximus,15
+Latin,Dosidicus gigas,10
+Latin,Sebastes viviparus,4
+Latin,Jasus edwardsii,1
+Latin,Cynoglossus senegalensis,23
+Latin,Dicologlossa cuneata,1
+Latin,Raja montagui,14
+Latin,Chlamys opercularis,1
+Latin,Sebastes norvegicus,8
+Latin,Ensis directus,6
+Latin,Argyrosomus regius,2
+Latin,Ruditapes decussatus,4
+Latin,Loligo,5
+Latin,Illex argentinus,7
+Latin,Trichiurus lepturus,4
+Latin,Solea vulgaris,17
+Latin,Scyliorhinus SPP,4
+Latin,Gadus morhua,53
+Latin,Chelon labrosus,5
+Latin,Melanogrammus aeglefinus,13
+Latin,Spondyliosoma cantharus,11
+Latin,Cancer edwardsii,12
+Latin,Molva macrophthalma,1
+Latin,Pegusa lascaris,2
+Latin,Reinhardtius hippoglossoides,7
+Latin,Molva molva,5
+Latin,Mytilus galloprovincialis,1
+Latin,Scophthalmus rhombus,1
+Latin,Cancer Borealis,12
+Latin,Illex illecebrosus,6
+Latin,Anguilla anguilla,1
+Latin,Scomber scombrus,50
+Latin,Solen SPP,5
+Latin,Cancer pagurus,12
+Latin,Paralithodes brevipes,1
+Latin,Thunnus alalunga,2
+Latin,Chione SPP,1
+Latin,Trisopterus luscus,1
+Latin,Necora puber,2
+Latin,Raja microocellata,23
+Latin,Sepia prashadi,2
+Latin,Lophius budegassa,15
+Latin,Scophtalmus maximus,2
+Latin,Raja naevus,25
+Latin,Zeus faber,3
+Latin,Salicornia Europaea,1
+Latin,Buccinum undatum,16
+Latin,Ensis ensis,11
+Latin,Glycymeris SPP,5
+Latin,Carcinus maenas,1
+Latin,Glycymeris glycymeris,6
+Latin,Salmo salar,4
+Latin,Octopus membranaceus,1
+Latin,Atlantoraja castelnaui,14
+Latin,Cerastoderma glaucum,4
+Latin,Maja brachydactyla,3
+Latin,Cerastoderma edule,6
+Latin,Crassostrea gigas,3
+Latin,Pleuronectes quadrituberculatus,5
+Latin,Leucoraja naevus,15
+Latin,Scyliorhinus canicula,6
+Latin,Maia squinado,19
+Latin,Umbrina,2
+Latin,Ommastrephidae,1
+Latin,Aspitrigla cuculus,9
+Latin,Microstomus kitt,2
+Latin,Anarhichas lupus,3
+Latin,Chelidonichthys lucerna,1
+Latin,Merlangius merlangus,25
+Latin,Ensis armatus,3
+Latin,Pollachius pollachius,7
+Latin,Solen marginatus,2
+Latin,Callista chione,1
+Latin,Gadus macrocephalus,55
+Latin,Ruditapes philippinarum,1
+Latin,Mustelus mento,1
+Latin,Aphanopus carbo,2
+Latin,Sebastes mentella,6
+Latin,Oncorhynchus mykiss,6
+Latin,Solea solea,11
+Latin,Sebastes Marinus,5
+Latin,Merluccius merluccius,32
+Latin,Labrus bergylta,2
+Latin,Raja brachyura,14
+Latin,Illex coindetii,4
+Latin,Octopus vulgaris,2
+Latin,Chelidonichthys cuculus,6
+Latin,Illex SPP,9
+Latin,Thunnus albacares,1
+Latin,Mullus barbatus,12
+Size,Grosse(es),28
+Size,16/20,5
+Size,20/30,2
+Size,1/2,3
+Size,30/40,2
+Size,5/10,1
+Size,Petit,3
+Size,40/60,2
+Size,Gros,8
+Size,N°5,1
+Size,10/20,3
+Size,N°3,3
+Size,Moyen,4
+Size,12/20,1
+Peche,Pêché(es),1324
+Peche,Elevé(es),26
+Cooking,cuit(es),14
+Cooking,vidé(es),5
+Cooking,saumuré(es),5
+Packing,Flt.,28
+Packing,Dos,93
+Packing,Filet de queue,1
+Packing,Coquille,3
+Packing,Coq.,5
+Packing,Tran.,1
+Packing,Filet,87
+Packing,Petit,4
+Packing,Pinces,17
+Packing,Tranche,4
+Packing,Nx.,1
+Packing,FLT.,26
+Packing,Anneaux,2
+Packing,Longe,4
+Packing,FtQueue,1
+Packing,Foie,4
+Packing,Darne,3
+Packing,Queue,23
+Packing,Blanc,11
+Packing,Pinc,7
+Packing,Miette,2
+Packing,Noix,9
+Packing,Tentacules,1
+Packing,Aile,138
+Packing,Joue,1
+SzoneCode,X,78
+SzoneCode,III,84
+SzoneCode,IV,82
+SzoneCode,I,94
+SzoneCode,IX,77
+SzoneCode,II,88
+SzoneCode,VI,98
+SzoneCode,V,90
+SzoneCode,XII,69
+SzoneCode,VIII,89
+SzoneCode,VII,86
+SzoneCode,XIV,70
+SzoneCode,AZ,69
+Gear,Plongée,3
+Gear,Filet,14
+Gear,Casier - piège - nasse,72
+Gear,Filet maillant,41
+Gear,Filets maillants,5
+Gear,Ligne et hameçons,86
+Gear,Senne et filet tournant,59
+Gear,Drague,49
+Gear,Pêche à pied,22
+Gear,Chalut,487
+Gear,Engins divers,1
