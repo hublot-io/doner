@@ -2,7 +2,7 @@ import gradio as gr
 from donut import DonutModel, JSONParseEvaluator, load_json, save_json
 import torchvision.transforms as transforms
 transform = transforms.ToTensor()
-model = DonutModel.from_pretrained('result/train_ner/test_experiment_templates',torchscript=True)
+model = DonutModel.from_pretrained('result/train_ner/test_experiment_templates_balanced',torchscript=True)
 model.to('cuda:0')
 model.half()
 

@@ -169,7 +169,7 @@ class DonutDataPLModule(pl.LightningDataModule):
             # weights = get_dataset_weights(train_dataset)
             # print('DS: ', len(train_dataset.dataset), 'W', len(weights))
             # sampler = WeightedRandomSampler(weights, len(train_dataset), False)
-
+            # print("SAMPLER", sampler)
             loaders.append(
                 DataLoader(
                     train_dataset,
